@@ -91,7 +91,7 @@
             // lblUSD
             // 
             this.lblUSD.AutoSize = true;
-            this.lblUSD.Location = new System.Drawing.Point(347, 366);
+            this.lblUSD.Location = new System.Drawing.Point(474, 274);
             this.lblUSD.Name = "lblUSD";
             this.lblUSD.Size = new System.Drawing.Size(65, 16);
             this.lblUSD.TabIndex = 20;
@@ -134,14 +134,14 @@
             // 
             // tbUSD
             // 
-            this.tbUSD.Location = new System.Drawing.Point(334, 385);
+            this.tbUSD.Location = new System.Drawing.Point(461, 293);
             this.tbUSD.Name = "tbUSD";
             this.tbUSD.Size = new System.Drawing.Size(100, 22);
             this.tbUSD.TabIndex = 14;
             // 
             // btnConverteer
             // 
-            this.btnConverteer.Location = new System.Drawing.Point(314, 283);
+            this.btnConverteer.Location = new System.Drawing.Point(245, 274);
             this.btnConverteer.Name = "btnConverteer";
             this.btnConverteer.Size = new System.Drawing.Size(142, 57);
             this.btnConverteer.TabIndex = 26;
