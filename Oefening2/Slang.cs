@@ -19,6 +19,11 @@ public class Slang : Dier
 Deze string heeft de inhoud 'Sjj'.*/
     public override String Zegt()
     {
+        /*In oefening 1 heb ik in plaats van 'return' te gebruiken,
+ Console.WriteLine gebruikt.
+Dit heb ik hier echter aangepast aangezien ik in mijn btnConverteer_Click geen gebruik kon
+maken van zaken die slechts in de console worden weergegeven.
+Nu gebruik ik dus return.*/
         return "Sjj: " + this.getUitspraak();
     }
 }

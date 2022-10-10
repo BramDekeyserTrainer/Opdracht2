@@ -15,13 +15,16 @@ namespace Oefening3
     {
         public formCurrencyConvertor()
         {
+            /*Dit is automatische genereerd.
+             Het definieert alles wat in de form wordt weergegeven.*/
             InitializeComponent();
         }
 
         /*De volgende zaken gebeuren wanneer de converteerknop wordt aangeklikt.*/
         private void btnConverteer_Click(object sender, EventArgs e)
         {
-            //Ik declareer de variabelen die ik ga gebruiken om de conerties te berekenen.
+            /*Ik declareer de variabelen die ik ga gebruiken om de conerties te berekenen.
+             Ik zet deze op double zodat deze als kommagetallen kunnen dienen.*/
             double pondWaarde;
             double euroWaarde;
             double rupeesWaarde;
@@ -49,7 +52,9 @@ namespace Oefening3
                 in geval van zeven statements of meer.
                 Ik weet niet wat uw idee daar omtrent is.
                 Ik ben ook niet zeker of dit de manier is waarop u wou dat we het oplosten,
-                Maar het lijkt wel te werken.*/
+                Maar het lijkt wel te werken.
+                In de code hieronder is niet al te veel commentaar vereist aangezien elk if-statement
+                heel erg op elkaar lijkt.*/
 
                 /*Voor de omzetting naar de pond.*/
                 if (!String.IsNullOrEmpty(tbPound.Text))
