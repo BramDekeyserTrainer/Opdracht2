@@ -10,16 +10,19 @@ public class Slang : Dier
 {
     /*De subklasse Slang heeft op haar beurt ook weer een constructor.
  * Ik heb deze constructor automatisch laten genereren.*/
-    public Slang(int gewicht, string geluid) : base(gewicht, geluid)
+    public Slang(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Sjj";
+        Geluid = @"C:\Users\Sam\Documents\waf\slang.wav";
     }
 
     /*In het geval van de subklasse Slang, wordt de uitspraak,
  die wordt verkregen via getUitspraak(), weergegeven in de console als een string.
 Deze string heeft de inhoud 'Sjj'.*/
-    public override void Zegt()
+    public override string Zegt()
     {
-        Console.WriteLine(String.Format("Sjj"), getUitspraak());
+        return "Geluid: " + Uitspraak;
     }
 }
 

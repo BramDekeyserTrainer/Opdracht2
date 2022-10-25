@@ -20,9 +20,9 @@ namespace Oefening2
 
         private void btnLaatHoren_Click(object sender, EventArgs e)
         {
-            Koe voorbeeldKoe = new Koe(150, "https://www.fesliyanstudios.com/play-mp3/6518");
-            Varken voorbeeldVarken = new Varken(88, "https://www.fesliyanstudios.com/play-mp3/6599");
-            Slang voorbeeldSlang = new Slang(6, "https://www.fesliyanstudios.com/play-mp3/6921");
+            Koe voorbeeldKoe = new Koe(150);
+            Varken voorbeeldVarken = new Varken(88);
+            Slang voorbeeldSlang = new Slang(6);
 
             if (cbKoeUitspraak.Checked)
             {
@@ -40,31 +40,33 @@ namespace Oefening2
 
             if (cbSlangUitspraak.Checked)
             {
-                tbVarken.Text = voorbeeldSlang.Zegt();
+                tbSlang.Text = voorbeeldSlang.Zegt();
             }
             else
             { }
 
             if (cbKoeGeluid.Checked)
             {
-                System.Media.SoundPlayer player = new SoundPlayer(@"C:\Users\Sam\Documents\dierengeluiden\koe.mp3");
-                player.Play();
+                voorbeeldKoe.Geluid();
             }
             else { }
 
             if (cbVarkenGeluid.Checked)
             {
-                System.Media.SoundPlayer player = new SoundPlayer(@"C:\Users\Sam\Documents\dierengeluiden\varken.mp3");
-                player.Play();
+                voorbeeldVarken.Geluid();
             }
             else { }
 
-            if (cbVarkenGeluid.Checked)
+            if (cbSlangGeluid.Checked)
             {
-                System.Media.SoundPlayer player = new SoundPlayer(@"C:\Users\Sam\Documents\dierengeluiden\slang.mp3");
-                player.Play();
+                voorbeeldSlang.Geluid();
             }
             else { }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

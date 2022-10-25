@@ -10,16 +10,19 @@ public class Varken : Dier
 {
     /*De subklasse Varken heeft op haar beurt ook weer een constructor.
      * Ik heb deze constructor automatisch laten genereren.*/
-    public Varken(int gewicht, string geluid) : base(gewicht, geluid)
+    public Varken(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Groink";
+        Geluid = @"C:\Users\Sam\Documents\waf\varken.wav";
     }
 
     /*In het geval van de subklasse Varken, wordt de uitspraak,
      die wordt verkregen via getUitspraak(), weergegeven in de console als een string.
     Deze string heeft de inhoud 'Groink'.*/
-    public override void Zegt()
+    public override string Zegt()
     {
-        Console.WriteLine(string.Format("Groink"), getUitspraak());
+        return "Geluid: " + Uitspraak;
     }
 
 }

@@ -10,17 +10,20 @@ public class Koe : Dier
 {
     /*De subklasse Koe heeft op haar beurt ook weer een constructor.
  * Ik heb deze constructor automatisch laten genereren.*/
-    public Koe(int gewicht, string geluid) : base(gewicht, geluid)
+    public Koe(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Boe";
+        Geluid = @"C:\Users\Sam\Documents\waf\koe.wav";
     }
 
 
     /*In het geval van de subklasse Koe, wordt de uitspraak,
  die wordt verkregen via getUitspraak(), weergegeven in de console als een string.
 Deze string heeft de inhoud 'Boe'.*/
-    public override void Zegt()
+    public override string Zegt()
     {
-        Console.WriteLine(String.Format("Boe"), getUitspraak());
+        return "Geluid: " + Uitspraak;
     }
 }
 

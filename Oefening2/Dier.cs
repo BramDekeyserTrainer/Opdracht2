@@ -12,26 +12,25 @@ public abstract class Dier
     /*De variabele Gewicht is een publieke integer.*/
     public int Gewicht;
 
-    /*Hier worden de private strings gedeclareerd.*/
-    private string Uitspraak; //Uitspraak bevindt zich niet binnen de constructor.
-    private string Geluid;
+    protected System.IO.Stream geluid;
 
-    //Ik maak de getters voor de private strings.
-    public string getUitspraak()
+    /*Hier worden de private strings gedeclareerd.*/
+    protected string Uitspraak; //Uitspraak bevindt zich niet binnen de constructor.
+    public string Geluid()
     {
+        System.Media.SoundPlayer geluidAfspeler = new System.Media.SoundPlayer(this.geluid);
+        geluidAfspeler.Play();
         return Uitspraak;
     }
-    public string getGeluid()
-    {
-        return this.Geluid;
-    }
+
 
     /*Ik maak de constructor voor de supperklasse Dier.
      Deze draagt logischerwijs dezelfde naam als de klasse zelf.*/
-    public Dier(int gewicht, string geluid)
+    public Dier()
     {
-        this.Gewicht = gewicht;
-        this.Geluid = geluid;
+        Gewicht = 0;
+        Uitspraak = "";
+        geluid = this.geluid;
     }
 
     /*Ik maak de methode 'Zegt' aan.
@@ -43,7 +42,7 @@ public abstract class Dier
     Ik weet echter zelf nog niet echt waarom.*/
     public virtual String Zegt()
     {
-        return this.getUitspraak();
+        return this.Uitspraak;
     }
 
    

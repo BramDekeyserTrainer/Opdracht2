@@ -32,6 +32,20 @@ namespace Oefening3
             double frankWaarde;
             double dollarWaarde;
 
+            /*Ik maak gebruik van de volgende constanten.*/
+            const double maalPond = 1.3103;
+            const double maalEuro = 1.1608;
+            const double maalRupees = 74.140;
+            const double maalYen = 0.0090098;
+            const double maalFrank = 1.0755;
+            const double maalUSD = 1;
+
+            const double maal1 = 0.86147;
+            const double maal2 = 74.140;
+            const double maal3 = 110.99;
+            const double maal4 = 0.9298;
+            const double maal5 = 0.7369;
+
             /*In de volgende if statements ga ik na welke velden al dan niet leeg zijn.
              Ik lees in wat ingevuld staat zodat ik vervolgens kan omrekenen.
              Ik laat alles naar alles converteren via de juiste formule met behulp van
@@ -59,53 +73,65 @@ namespace Oefening3
                 /*Voor de omzetting naar de pond.*/
                 if (!String.IsNullOrEmpty(tbPound.Text))
                 {
-                    pondWaarde = Double.Parse(tbPound.Text) * 1.3103;
+                    pondWaarde = Double.Parse(tbPound.Text) * maalPond;
                     tbUSD.Text = pondWaarde.ToString();
-                    tbEuro.Text = (Double.Parse(tbUSD.Text) * 0.86147).ToString();
-                    tbRupees.Text = (Double.Parse(tbUSD.Text) * 74.140).ToString();
-                    tbYen.Text = (Double.Parse(tbUSD.Text) * 110.99).ToString();
-                    tbFrank.Text = (Double.Parse(tbUSD.Text) * 0.9298).ToString();
+                    tbEuro.Text = (Double.Parse(tbUSD.Text) * maal1).ToString();
+                    tbRupees.Text = (Double.Parse(tbUSD.Text) * maal2).ToString();
+                    tbYen.Text = (Double.Parse(tbUSD.Text) * maal3).ToString();
+                    tbFrank.Text = (Double.Parse(tbUSD.Text) * maal4).ToString();
                 }
 
                 /*Voor de omzetting naar de euro.*/
                 else if (!String.IsNullOrEmpty(tbEuro.Text))
                 {
-                    euroWaarde = Double.Parse(tbPound.Text) * 1.1608;
+                    euroWaarde = Double.Parse(tbPound.Text) * maalEuro;
                     tbUSD.Text = euroWaarde.ToString();
-                    tbPound.Text = (Double.Parse(tbUSD.Text) * 0.7369).ToString();
-                    tbRupees.Text = (Double.Parse(tbUSD.Text) * 74.140).ToString();
-                    tbYen.Text = (Double.Parse(tbUSD.Text) * 110.99).ToString();
-                    tbFrank.Text = (Double.Parse(tbUSD.Text) * 0.9298).ToString();
+                    tbPound.Text = (Double.Parse(tbUSD.Text) * maal5).ToString();
+                    tbRupees.Text = (Double.Parse(tbUSD.Text) * maal2).ToString();
+                    tbYen.Text = (Double.Parse(tbUSD.Text) * maal3).ToString();
+                    tbFrank.Text = (Double.Parse(tbUSD.Text) * maal4).ToString();
                 }
                 else if (!String.IsNullOrEmpty(tbRupees.Text))
                 {
-                    rupeesWaarde = Double.Parse(tbRupees.Text) * 0.013488;
+                    rupeesWaarde = Double.Parse(tbRupees.Text) * maalRupees;
                     tbUSD.Text = rupeesWaarde.ToString();
-                    tbPound.Text = (Double.Parse(tbUSD.Text) * 0.7369).ToString();
-                    tbEuro.Text = (Double.Parse(tbUSD.Text) * 0.86147).ToString();
-                    tbYen.Text = (Double.Parse(tbUSD.Text) * 110.99).ToString();
-                    tbFrank.Text = (Double.Parse(tbUSD.Text) * 0.9298).ToString();
+                    tbPound.Text = (Double.Parse(tbUSD.Text) * maal5).ToString();
+                    tbEuro.Text = (Double.Parse(tbUSD.Text) * maal1).ToString();
+                    tbYen.Text = (Double.Parse(tbUSD.Text) * maal3).ToString();
+                    tbFrank.Text = (Double.Parse(tbUSD.Text) * maal4).ToString();
                 }
                 /*Voor de omzetting naar de Yen.*/
                 else if (!String.IsNullOrEmpty(tbYen.Text))
                 {
-                    yenWaarde = Double.Parse(tbYen.Text) * 0.0090098;
+                    yenWaarde = Double.Parse(tbYen.Text) * maalYen;
                     tbUSD.Text = yenWaarde.ToString();
-                    tbPound.Text = (Double.Parse(tbUSD.Text) * 0.7369).ToString();
-                    tbEuro.Text = (Double.Parse(tbUSD.Text) * 0.86147).ToString();
-                    tbRupees.Text = (Double.Parse(tbUSD.Text) * 74.140).ToString();
-                    tbFrank.Text = (Double.Parse(tbUSD.Text) * 0.9298).ToString();
+                    tbPound.Text = (Double.Parse(tbUSD.Text) * maal5).ToString();
+                    tbEuro.Text = (Double.Parse(tbUSD.Text) * maal1).ToString();
+                    tbRupees.Text = (Double.Parse(tbUSD.Text) * maal2).ToString();
+                    tbFrank.Text = (Double.Parse(tbUSD.Text) * maal4).ToString();
                 }
 
                 /*Voor de omzetting naar de Frank.*/
                 else if (!String.IsNullOrEmpty(tbFrank.Text))
                 {
-                    frankWaarde = Double.Parse(tbFrank.Text) * 1.0755;
+                    frankWaarde = Double.Parse(tbFrank.Text) * maalFrank;
                     tbUSD.Text = frankWaarde.ToString();
-                    tbPound.Text = (Double.Parse(tbUSD.Text) * 0.7369).ToString();
-                    tbEuro.Text = (Double.Parse(tbUSD.Text) * 0.86147).ToString();
-                    tbRupees.Text = (Double.Parse(tbUSD.Text) * 74.140).ToString();
-                    tbYen.Text = (Double.Parse(tbUSD.Text) * 110.99).ToString();
+                    tbPound.Text = (Double.Parse(tbUSD.Text) * maal5).ToString();
+                    tbEuro.Text = (Double.Parse(tbUSD.Text) * maal1).ToString();
+                    tbRupees.Text = (Double.Parse(tbUSD.Text) * maal2).ToString();
+                    tbYen.Text = (Double.Parse(tbUSD.Text) * maal3).ToString();
+                }
+
+                /*Voor de omzetting naar de Euro.*/
+                else if (!String.IsNullOrEmpty(tbUSD.Text))
+                {
+                    dollarWaarde = Double.Parse(tbUSD.Text) * maalUSD;
+                    tbUSD.Text = dollarWaarde.ToString();
+                    tbPound.Text = (Double.Parse(tbUSD.Text) * maal5).ToString();
+                    tbRupees.Text = (Double.Parse(tbUSD.Text) * maal2).ToString();
+                    tbEuro.Text = (Double.Parse(tbUSD.Text) * maal1).ToString();
+                    tbYen.Text = (Double.Parse(tbUSD.Text) * maal3).ToString();
+                    tbFrank.Text = (Double.Parse(tbUSD.Text) * maal4).ToString();
                 }
 
 

@@ -13,18 +13,18 @@ namespace Oefening1
         {
             /*Ik maak een koe aan.
              Vervolgens voer ik de Zegt() functie uit op deze specifieke koe.*/
-            Koe koe1 = new Koe(14, "https://www.fesliyanstudios.com/play-mp3/6518");
+            Koe koe1 = new Koe(14);
+            Varken varken1 = new Varken(200);
+            Slang slang1 = new Slang(8);
+
+            Console.WriteLine(koe1);
+            Console.WriteLine(varken1);
+            Console.WriteLine(slang1);
+
+            Console.WriteLine(koe1.Zegt());
+            Console.WriteLine(varken1.Zegt());
+            Console.WriteLine(slang1.Zegt());
             koe1.Zegt();
-
-            /*Ik maak een varken aan.
-             Vervolgens voer ik de Zegt() functie uit op deze specifieke varken.*/
-            Varken varken1 = new Varken(28, "https://www.fesliyanstudios.com/play-mp3/6599");
-            varken1.Zegt();
-
-            /*Ik maak een slang aan.
-             Vervolgens voer ik de Zegt() functie uit op deze specifieke slang.*/
-            Slang slang1 = new Slang(5, "https://www.fesliyanstudios.com/play-mp3/6921");
-            slang1.Zegt();
 
             /*Door Console.ReadLine() te gebruiken vermeid ik dat de console meteen sluit,
              na het printen van de informatie.

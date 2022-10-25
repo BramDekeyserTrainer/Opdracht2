@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.PropertyGridInternal;
 
 /*Ik maak de publieke klasse Varken aan.
  Deze erft de informatie over van de supperklasse 'Dier'.*/
@@ -10,8 +11,11 @@ public class Varken : Dier
 {
     /*De subklasse Varken heeft op haar beurt ook weer een constructor.
      * Ik heb deze constructor automatisch laten genereren.*/
-    public Varken(int gewicht, string geluid) : base(gewicht, geluid)
+    public Varken(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Groink";
+        geluid = Oefening2.Properties.Resources.varken;
     }
 
     /*In het geval van de subklasse Varken, wordt de uitspraak,
@@ -24,7 +28,7 @@ public class Varken : Dier
         Dit heb ik hier echter aangepast aangezien ik in mijn btnConverteer_Click geen gebruik kon
         maken van zaken die slechts in de console worden weergegeven.
         Nu gebruik ik dus return.*/
-        return "Groink" + this.getUitspraak();
+        return this.Uitspraak;
     }
 
 }

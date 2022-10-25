@@ -10,28 +10,20 @@ using System.Threading.Tasks;
 public abstract class Dier
 {
     /*De variabele Gewicht is een publieke integer.*/
-    public int Gewicht;
+    public int Gewicht { get; set; }
 
     /*Hier worden de private strings gedeclareerd.*/
-    private string Uitspraak; //Uitspraak bevindt zich niet binnen de constructor.
-    private string Geluid;
+    public string Uitspraak { get; set; } //Uitspraak bevindt zich niet binnen de constructor.
+    public string Geluid { get; set; }
 
-    //Ik maak de getters voor de private strings.
-    public string getUitspraak()
-    {
-        return Uitspraak;
-    }
-    public string getGeluid()
-    {
-        return this.Geluid;
-    }
 
     /*Ik maak de constructor voor de supperklasse Dier.
      Deze draagt logischerwijs dezelfde naam als de klasse zelf.*/
-    public Dier(int gewicht, string geluid)
+    public Dier()
     {
-        this.Gewicht = gewicht;
-        this.Geluid = geluid;
+        Gewicht = 0;
+        Uitspraak = "";
+        Geluid = "";
     }
 
     /*Ik maak de methode 'Zegt' aan.
@@ -41,9 +33,9 @@ public abstract class Dier
     maar deze keer in de subklassen.
     Wanneer ik er virtual van maakte, was de foutmelding weg.
     Ik weet echter zelf nog niet echt waarom.*/
-    public virtual void Zegt()
+    public virtual string Zegt()
     {
-        Console.WriteLine(String.Format(this.Uitspraak));
+        return this.Uitspraak;
     }
 
    

@@ -21,17 +21,17 @@ namespace Oefening2
 
             /*Ik maak een koe aan.
              Vervolgens voer ik de Zegt() functie uit op deze specifieke koe.*/
-            Koe koe1 = new Koe(14, @"C:\Users\Sam\Documentscdierengeluiden\koe.mp3");
+            Koe koe1 = new Koe(14);
             koe1.Zegt();
 
             /*Ik maak een varken aan.
              Vervolgens voer ik de Zegt() functie uit op deze specifieke varken.*/
-            Varken varken1 = new Varken(28, "C:\\Users\\Sam\\Documentscdierengeluiden\\koe.mp3");
+            Varken varken1 = new Varken(28);
             varken1.Zegt();
 
             /*Ik maak een slang aan.
              Vervolgens voer ik de Zegt() functie uit op deze specifieke slang.*/
-            Slang slang1 = new Slang(5, "C:\\Users\\Sam\\Documentscdierengeluiden\\koe.mp3");
+            Slang slang1 = new Slang(5);
             slang1.Zegt();
 
             /*Door Console.ReadLine() te gebruiken vermeid ik dat de console meteen sluit,

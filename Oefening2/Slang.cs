@@ -10,8 +10,11 @@ public class Slang : Dier
 {
     /*De subklasse Slang heeft op haar beurt ook weer een constructor.
  * Ik heb deze constructor automatisch laten genereren.*/
-    public Slang(int gewicht, string geluid) : base(gewicht, geluid)
+    public Slang(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Sjj";
+        geluid = Oefening2.Properties.Resources.slang;
     }
 
     /*In het geval van de subklasse Slang, wordt de uitspraak,
@@ -24,7 +27,7 @@ Deze string heeft de inhoud 'Sjj'.*/
 Dit heb ik hier echter aangepast aangezien ik in mijn btnConverteer_Click geen gebruik kon
 maken van zaken die slechts in de console worden weergegeven.
 Nu gebruik ik dus return.*/
-        return "Sjj: " + this.getUitspraak();
+        return this.Uitspraak;
     }
 }
 

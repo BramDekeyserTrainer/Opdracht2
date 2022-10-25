@@ -10,8 +10,11 @@ public class Koe : Dier
 {
     /*De subklasse Koe heeft op haar beurt ook weer een constructor.
  * Ik heb deze constructor automatisch laten genereren.*/
-    public Koe(int gewicht, string geluid) : base(gewicht, geluid)
+    public Koe(int gewicht) : base()
     {
+        this.Gewicht = gewicht;
+        Uitspraak = "Boe";
+        geluid = Oefening2.Properties.Resources.koe;
     }
 
 
@@ -25,7 +28,7 @@ Deze string heeft de inhoud 'Boe'.*/
 Dit heb ik hier echter aangepast aangezien ik in mijn btnConverteer_Click geen gebruik kon
 maken van zaken die slechts in de console worden weergegeven.
 Nu gebruik ik dus return.*/
-        return "Moe " + this.getUitspraak();
+        return this.Uitspraak;
     }
 }
 
