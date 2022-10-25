@@ -24,6 +24,7 @@ namespace Oefening2
             Varken voorbeeldVarken = new Varken(88);
             Slang voorbeeldSlang = new Slang(6);
 
+            /*Ik heb de if statements aangepast.*/
             if (cbKoeUitspraak.Checked)
             {
                 tbKoe.Text = voorbeeldKoe.Zegt();
